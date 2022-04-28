@@ -7,17 +7,25 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="'active'">Dashboard</a>
+            <a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="'active'">{{ 'header.menu.dashboard' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/chat']" [routerLinkActive]="'active'">Chat</a>
+            <a class="nav-link" [routerLink]="['/chat']" [routerLinkActive]="'active'">{{ 'header.menu.chat' | translate }}</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
-            <li class="nav-item">
-                <a class="nav-link" (click)="doLogout()">Logout</a>
-              </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="switchToThai()">TH</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="switchToEnglish()">EN</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" (click)="doLogout()">{{ 'header.menu.logout' | translate }}</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <div>GG: {{ 'test.message' | translate }}</div>
